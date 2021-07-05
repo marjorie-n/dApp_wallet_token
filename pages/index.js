@@ -108,12 +108,20 @@ export default function Home() {
     // get  balance token with Metamask//
     const setBalance = async () => {
       //setBalanceToken(web3.utils.fromWei(balanceToken, 'ether'))
-      //await storageContract.methods.balanceOf(accounts[0]).call()
-      const balanceToken = await storageContract.methods
+     // await storageContract.methods.balanceOf(accounts[0]).call()
+      console.log(accounts);
+      if(accounts.length>0){
+        const balanceToken = await storageContract.methods
         .balanceOf(accounts[0])
-        .call();
-      const wallet = web3.utils.fromWei(balanceToken, "ether");
-      setBalanceToken(wallet)
+       .call();
+       const balanceEthToken = web3.utils.fromWei(balanceToken, "ether");
+       setBalanceToken(balanceEthToken)
+      }
+      //const balanceToken = await storageContract.methods
+        //.balanceOf("0xe5d6d7e2680284baA6DAA837b052e23309F5667F")
+       //.call();
+      //const wallet = web3.utils.fromWei(balanceToken, "ether");
+     //setBalanceToken(wallet)
     };
 
     const getSymbol = async () => {
