@@ -165,7 +165,7 @@ export default function Home() {
         <p>Amount Ether: {balance}Eth</p>
         <div className="row g-3 align-items-center">
         <div className="form-group">
-        <label for="inputPassword6" class="col-form-label">Address: </label>
+        <label className="col-form-label">Address: </label>
         <input
           type="text"
           onChange={(e) => setAddressToSend(e.target.value)} value={addressToSend}
@@ -173,7 +173,7 @@ export default function Home() {
         </div>
         <br></br>
         <div className="form-group">
-        <label for="inputPassword6" class="col-form-label">Amount:</label>
+        <label className="col-form-label">Amount:</label>
         <input
           type="number"
           onChange={(e) => setWeiToSend(e.target.value)} value={weiToSend}
@@ -188,12 +188,12 @@ export default function Home() {
         <p>Amount EduToken: <span>{balanceToken}</span> {symbol}</p>
         <div className="row g-3 align-items-center">
         <div className="form-group">
-        <labe for="inputPassword6" class="col-form-label">Address Erc20: </labe>
-        <input type="text"  onChange={(e) =>setAddressErc20(e.target.value)} value={addressErc20}  />
+        <label className="col-form-label">Address Erc20: </label>
+        <input type="text" onChange={(e) =>setAddressErc20(e.target.value)} value={addressErc20}  />
         </div>
         <br></br>
         <div className="form-group">
-        <label for="inputPassword6" class="col-form-label">Address:</label>
+        <label className="col-form-label">Address:</label>
         <input
           type="text"
           onChange={(e) => setAddressToSend(e.target.value)} value={addressToSend}
@@ -201,7 +201,7 @@ export default function Home() {
         </div>
         <br></br>
         <div className="form-group">
-        <label for="inputPassword6" class="col-form-label">Amount:</label>
+        <label className="col-form-label">Amount:</label>
         <input
           type="number"
           onChange={(e) => setWeiToSend(e.target.value)} value={weiToSend}
