@@ -147,6 +147,7 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>Wallet dApp</title>
+        <meta charset="utf-8"/> 
         <meta name="description" content="Wallet dApp" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -212,7 +213,7 @@ export default function Home() {
         <button type="button" className="btn-sub" onClick={sendToken}>
           Send
         </button>
-      </main>
+   
       <footer className={styles.footer}>
         <a
           href="https://github.com/Margotte83/dApp_wallet_token"
@@ -222,6 +223,7 @@ export default function Home() {
           My Github link
         </a>
       </footer>
+      </main>
       </div>
   );
 }
