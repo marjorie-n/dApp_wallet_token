@@ -1,3 +1,29 @@
+# Create a dApp to exchange ERC20 tokens
+## 🤓 Quest objectives:
+The objective of the quest is simple, to create one of these Ethereum wallets, at least to implement the main functions:
+
+Consult his balance the balance of his Tokens; 📈
+Send ERC20 tokens; ↗️
+Instantiate and interact with an ERC20 smart contract. 👨‍💻
+
+Some reminders on Web3Js and the equivalents on EthersJs
+To instantiate a smart contract, ERC20 or another for that matter, on Web3JS, you have to do:
+
+const contract = new Contract (abi, address)
+The equivalent on EthersJs is this:
+
+const contract = new ethers.Contract (address, abi, signerOrProvider)
+If you only want to read the data from the smart contract, you have to add a provider.
+In the case of writing to change the state of a smart contract, it is instantiated with a signer.
+
+Then to send tokens with Web3Js, you must use this instruction
+
+contract.methods.transfer (address, amount) .send ({from: account})
+And the EthersJs version:
+
+contract.transfer (address, amount)
+
+----------------------------------------------------------------------------------------------------------
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
