@@ -6,8 +6,8 @@ import Web3 from "web3";
 import StorageABI from "../contract/storage.json";
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "../styles/Home.module.css";
-import EthForm from "./formulaires/EthForm";
-import Erc20Form from "./formulaires/ERC20Form";
+import EthForm from "./forms/EthForm";
+import Erc20Form from "./forms/ERC20Form";
 
 
 export default function Home() {
