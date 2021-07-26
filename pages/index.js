@@ -330,8 +330,8 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <div class="card text-center">
-        <div class="card-header">
+      <div className="card text-center">
+        <div className="card-header">
           <a
             href="https://github.com/Margotte83/dApp_wallet_token"
             rel="noreferrer"
