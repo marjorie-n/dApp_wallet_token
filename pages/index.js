@@ -1,8 +1,12 @@
 import { useState, useCallback, useEffect } from "react";
 import Head from "next/head";
 
-import Web3 from "web3";
+import Box from "../components/box";
+import Footer from "../components/footer";
 
+import styled from "styled-components";
+
+import Web3 from "web3";
 import StorageABI from "../contract/storage.json";
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "../styles/Home.module.css";
@@ -205,29 +209,78 @@ export default function Home() {
   /**
    * Rendering JSX
    */
+  /**
+   * @styled-component
+   */
+  const Main = styled.main`
+    background: #fff;
+    padding: 20px;
+    max-width: 100em;
+    /* text-align: center; */
+    margin: 0 auto 4rem;
+    margin-top: 20px;
+  `;
+
+  const Title = styled.h1`
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+  `;
+
+  const ButtonSend = styled.button`
+    background: blue;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  `;
+
+  const ButtonSendToken = styled.button`
+    background: blue;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+ 
+  `;
 
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
-        <title>Wallet dApp</title>
-        <meta charset="utf-8" />
+        <title>Dapp Wallet Token</title>
+        <meta charSet="utf-8" />
         <meta name="description" content="Wallet dApp" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
+      <Main>
         {!isConnectedWeb3 ? (
-          <button className="btn btn-secondary btn-lg" onClick={connectToWeb3}>
+          <ButtonSend
+            className="btn btn-warning btn-lg"
+            onClick={connectToWeb3}
+          >
             Connect to web3
-          </button>
+          </ButtonSend>
         ) : (
           <button className="btn btn-secondary btn-lg disabled" disabled>
             {getNetwork()}
           </button>
         )}
-
         <div className={"container mb-5"}>
-          <h1>Wallet dApp</h1>
+          <Title>dApp wallet token</Title>
+          <br></br>
           <p>My Address Wallet: {accounts[0]}</p>
           <p>
             Amount Ether: {balance / 10 ** decimals} {symbol}
@@ -260,16 +313,16 @@ export default function Home() {
               </div>
 
               <div className={"text-end"}>
-                <button
+                <ButtonSendToken
                   type="button"
                   className="btn btn-primary mt-3"
                   onClick={sendEth}
                 >
                   Send
-                </button>
+                </ButtonSendToken>
               </div>
 
-              <h2>WCS Token</h2>
+              <Title>WCS Token</Title>
               <p>
                 Amount EduToken: <span>{balanceToken / 10 ** decimals}</span>{" "}
                 {symbol}
@@ -278,9 +331,7 @@ export default function Home() {
               <div className="row">
                 <div className={"col-sm-6"}>
                   <div className="row mt-2">
-                    <label className="col-4 col-form-label">
-                    Erc20 address:
-                    </label>
+                    <label className="col-4 col-form-label">Erc20:</label>
                     <div className={"col-8 p-0"}>
                       <input
                         className={`form-control ${addressErrorCSS}`}
@@ -315,13 +366,13 @@ export default function Home() {
                     </div>
 
                     <div className={"text-end mt-3"}>
-                      <button
+                      <ButtonSendToken
                         type="button"
                         className="btn btn-primary"
                         onClick={sendToken}
                       >
                         Send
-                      </button>
+                      </ButtonSendToken>
                     </div>
                   </div>
                 </div>
@@ -329,18 +380,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </main>
-      <div className="card text-center">
-        <div className="card-header">
-          <a
-            href="https://github.com/Margotte83/dApp_wallet_token"
-            rel="noreferrer"
-            target="_blank"
-          >
-            My Github link
-          </a>
-        </div>
-      </div>
+        <Box />
+      </Main>
+      <Footer />
     </div>
   );
 }
