@@ -5,7 +5,7 @@ const FooterStyled = styled.footer`
   height: 180px!important;
 `;
 const TextCenter = styled.div`
-  color: white!important;
+  color: white !important;
   text-align: center;
 `;
 
