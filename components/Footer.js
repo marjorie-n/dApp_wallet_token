@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 const FooterStyled = styled.footer`
-  background-color: black !important;
-  height: 180px!important;
+  height: 380px !important;
 `;
 const TextCenter = styled.div`
   color: white !important;
@@ -11,7 +10,7 @@ const TextCenter = styled.div`
 
 export default function Footer() {
   return (
-    <FooterStyled className="bg-dark text-center text-lg-start">
+    <FooterStyled className="bg-white text-center text-lg-start">
       <TextCenter className="text-center p-3">
         @2021 developed by &nbsp;
         <a
@@ -21,11 +20,19 @@ export default function Footer() {
         >
           Marjorie Ngoupende
         </a>{" "}
-        |{" "}
-        <a className="text-danger" href="https://www.wildcodeschool.com/"
-        target="_blank">
+        |
+        <a className="text-black" href="https://github.com/Margotte83/dApp_wallet_token" target="_blank">
           {" "}
-          Wild Code School Campus Blockchain{" "}
+          Github link{" "}
+        </a>
+        | &nbsp;
+        <a
+          className="text-danger"
+          href="https://www.wildcodeschool.com/fr-FR/blog/developpeur-blockchain-formation-developpement-ethereum"
+          target="_blank"
+        >
+          {" "}
+          Wild Code School{" "}
         </a>
       </TextCenter>
     </FooterStyled>

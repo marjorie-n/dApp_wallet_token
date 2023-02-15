@@ -1,67 +1,86 @@
-* {
-  box-sizing: border-box;
-}
 html,
 body {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  height: 100%;
+}
+body {
+  background: #222;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 a {
   color: inherit;
   text-decoration: none;
 }
-a:hover {
-  text-decoration: underline;
+.content {
+  padding: 125px 50px 50px;
+  flex-grow: 1;
+}
+.btn-group > .btn,
+.btn {
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  border-radius: 0.3rem;
+  float: right;
+  border: 1px solid #c6c6c6;
+}
+.alert.alert-success{
+  background-color: #4caf50;
+  width: 300px;
+  color: white;
+  padding: 20px;
+  margin-bottom: 15px;
+  margin-left: 75%;
+}
+.float-right {
+  border: 1px solid black;
+  padding: 10px;
+  width: 140px;
+  text-align: center;
+  margin-left: 75%;
+}
+img,
+svg {
+  vertical-align: middle;
+  width: 100px;
+  display: flex;
+  float: right;
+  padding: 8px;
+  margin: 8px;
 }
 
-.btn-group-lg > .btn, .btn-lg {
-  padding: .5rem 1rem;
-  font-size: 1.25rem;
-  border-radius: .3rem;
-  float: right;
-  border: 1px solid #C6C6C6;
-  margin-right: 10px;
+label {
+  display: block;
+  margin-top: 10px;
+  width: 108px;
+}
+input {
+  width: 260px;
+}
+
+.btn-sub {
+  color: black;
+  margin-top: 20px;
+  width: 129px;
+  height: 29px;
+  box-shadow: 1px 1px 1px black;
+  border-radius: 30px;
+  background: rgba(196, 196, 196, 0.38);
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+button {
   justify-content: flex-end;
 }
-
-.btn-secondary {
-  border-color: black;
-  box-shadow: 0px 0px 0px 0px black;
-}
-
-
-/*RESPONSIVE CSS*/
-@media screen and (max-width: 700px) {
-  .btn-group-lg>.btn, .btn-lg {
-    padding: .25rem .5rem;
-    font-size: .875rem;
-    border-radius: .2rem;
-    float: right;
-    border: 1px solid #C6C6C6;
-    margin-right: 10px;
+/* media queries */
+@media screen and (max-width: 640px) {
+  .row{
+    display: none;
   }
-  
-}
-@media screen and (max-width: 500px) {
-  .btn-group-lg>.btn, .btn-lg {
-    padding: .25rem .5rem;
-    font-size: .875rem;
-    border-radius: .2rem;
-    float: right;
-    border: 1px solid #C6C6C6;
-    margin-right: 10px;
-  }
-}
-@media screen and (max-width: 855px) {
-  input.form-control {
-    margin-left:50px;
-    width:none;
-}
-input.form-control-is-valid {
-    margin-left:20px;
-    width:none;
-}
-.btn-primary{
-  margin-left: 0px;
-}
 }
