@@ -17,11 +17,13 @@ export default function Footer() {
         <a
           className="text-primary"
           href="https://www.linkedin.com/in/marjorie-ngoupende-dev/"
+          target="_blank"
         >
           Marjorie Ngoupende
         </a>{" "}
         |{" "}
-        <a className="text-danger" href="https://www.wildcodeschool.com/">
+        <a className="text-danger" href="https://www.wildcodeschool.com/"
+        target="_blank">
           {" "}
           Wild Code School Campus Blockchain{" "}
         </a>
