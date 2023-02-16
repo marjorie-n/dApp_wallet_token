@@ -78,7 +78,6 @@ input {
 button {
   justify-content: flex-end;
 }
-
 /* media queries */
 @media screen and (max-width: 900px) {
   input.form-control {
@@ -89,6 +88,6 @@ button {
     margin-left: 0;
   }
   footer {
-    width: max-content;
+    margin-left: 0;
   }
 }
