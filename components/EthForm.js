@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
-import StorageABI from "../contract/storage.json";
 
-const EthForm = ({ web3, accounts, StorageABI }) => {
+const EthForm = ({ web3, accounts }) => {
   const [balance, setBalance] = useState(0);
   const [decimals, setDecimals] = useState(18);
   const [symbol, setSymbol] = useState("");

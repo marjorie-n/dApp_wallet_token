@@ -24,7 +24,7 @@ a {
   float: right;
   border: 1px solid #c6c6c6;
 }
-.alert.alert-success{
+.alert.alert-success {
   background-color: #4caf50;
   width: 300px;
   color: white;
@@ -55,7 +55,7 @@ label {
   width: 108px;
 }
 input {
-  width: 260px;
+  width: 200px;
 }
 
 .btn-sub {
@@ -78,9 +78,17 @@ input {
 button {
   justify-content: flex-end;
 }
+
 /* media queries */
-@media screen and (max-width: 640px) {
-  .row{
-    display: none;
+@media screen and (max-width: 900px) {
+  input.form-control {
+    margin-left: 40px;
+    width: 200px;
+  }
+  .alert.alert-success {
+    margin-left: 0;
+  }
+  footer {
+    width: max-content;
   }
 }
