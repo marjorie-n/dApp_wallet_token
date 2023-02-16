@@ -103,7 +103,12 @@ export default function Home() {
       <Head>
         <title>Wallet dApp</title>
         <meta name="description" content="Wallet dApp" />
-        <link rel="stylesheet" media="screen" href="screen.css" type="text/css" />
+        <link
+          rel="stylesheet"
+          media="screen"
+          href="screen.css"
+          type="text/css"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

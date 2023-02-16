@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 const FooterStyled = styled.footer`
-  height: 380px !important;
+  height: 100px !important;
 `;
 const TextCenter = styled.div`
-  color: white !important;
+  color: black !important;
   text-align: center;
 `;
 
